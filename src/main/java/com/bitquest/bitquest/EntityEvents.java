@@ -527,6 +527,10 @@ public class EntityEvents implements Listener {
                             entity.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, 2), true);
                         if (bitQuest.rand(1, 128) < level)
                             entity.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 2), true);
+			if (bitQuest.rand(1, 128) < level)
+                            entity.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 2), true);
+			if (bitQuest.rand(1, 128) < level)
+                            entity.addPotionEffect(new PotionEffect(PotionEffectType.LUCK, Integer.MAX_VALUE, 2), true);
                         if (bitQuest.rand(1, 128) < level)
                             entity.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, Integer.MAX_VALUE, 2), true);
                         if (level > 64)
@@ -709,12 +713,13 @@ public class EntityEvents implements Listener {
         ItemMeta meta = item.getItemMeta();
         Enchantment enchantment = null;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.ARROW_FIRE;
-        if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DAMAGE_ALL;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.ARROW_DAMAGE;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.ARROW_INFINITE;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.ARROW_KNOCKBACK;
+	if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DAMAGE_ALL;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DAMAGE_ARTHROPODS;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DAMAGE_UNDEAD;
+	if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DEPTH_STRIDER;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DIG_SPEED;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.DURABILITY;
         if (BitQuest.rand(0, 128) <level) enchantment = Enchantment.FIRE_ASPECT;
