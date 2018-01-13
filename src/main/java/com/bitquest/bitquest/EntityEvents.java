@@ -626,7 +626,9 @@ public class EntityEvents implements Listener {
         // Gives random SWORD
         if (!(entity instanceof Skeleton)) {
             Material sword_material = null;
-            if (BitQuest.rand(0, 16) < level) sword_material = Material.IRON_AXE;
+	    if (BitQuest.rand(0, 4) < level) sword_material = Material.WOOD_AXE;
+            if (BitQuest.rand(0, 8) < level) sword_material = Material.IRON_AXE;
+	    if (BitQuest.rand(0, 16) < level) sword_material = Material.DIAMOND_AXE;
             if (BitQuest.rand(0, 32) < level) sword_material = Material.WOOD_SWORD;
             if (BitQuest.rand(0, 64) < level) sword_material = Material.IRON_SWORD;
             if (BitQuest.rand(0, 128) < level) sword_material = Material.DIAMOND_SWORD;
